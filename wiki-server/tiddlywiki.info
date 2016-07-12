@@ -1,0 +1,17 @@
+{
+	"description": "Server configuration of TiddlyWiki European Meetup 2016",
+	"plugins": [
+		"tiddlywiki/tiddlyweb",
+		"tiddlywiki/filesystem"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite"
+	],
+	"includeWikis": [
+		"../wiki"
+	],
+	"config": {
+		"default-tiddler-location": "../wiki/tiddlers"
+	}
+}
