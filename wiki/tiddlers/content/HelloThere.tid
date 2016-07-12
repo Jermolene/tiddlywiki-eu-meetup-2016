@@ -1,10 +1,12 @@
 created: 20160712105521405
-modified: 20160712122714845
+modified: 20160712125301310
 title: HelloThere
 type: text/vnd.tiddlywiki
 
 Welcome to the website for the TiddlyWiki European Meetup 2016.
 
-!! [[Timings]] • [[Location]] • [[Agenda]] • [[SiteMap]]  • [[LiveStream]] 
+!! [[Timings]] • [[Location]] • [[Agenda]] • [[SiteMap]]  • [[LiveStream]]
+
+//Compare the [[static HTML|http://tiddlywiki.com/tiddlywiki-eu-meetup-2016/index.html]] and [[interactive|http://tiddlywiki.com/tiddlywiki-eu-meetup-2016/wiki.html]] renderings of this site//
 
 [img[banner.jpg]]
