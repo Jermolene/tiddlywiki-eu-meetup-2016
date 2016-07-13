@@ -29,6 +29,18 @@ html body.tc-body {
 	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "DejaVu Sans", sans-serif;
 }
 
+/*
+** Center the page
+*/
+
+@media (max-width: 850px) {
+
+html .tc-story-river {
+	padding-top: 42px;
+}
+
+}
+
 @media (min-width: 850px) {
 
 html .tc-page-container {
@@ -44,6 +56,63 @@ html .tc-story-river {
 }
 
 }
+
+/*
+** Account for the hamburger menu when jumping to an anchor
+*/
+
+.tc-tiddler-anchor {
+    padding-top: 2em;
+    margin-top: -2em;
+}
+
+/*
+** Hamburger menu
+*/
+
+html nav.tc-hamburger-menu {
+	margin: 0 auto;
+	text-align: center;	
+}
+
+html nav.tc-hamburger-menu {
+	border-bottom: 1px solid #2066a9;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #2e74b7;
+	z-index: 990;
+}
+
+nav.tc-hamburger-menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav.tc-hamburger-menu ul li {
+	display: inline-block;
+    margin: 0.25em 0.5em 0.25em 0.5em;
+}
+
+nav.tc-hamburger-menu ul li p {
+	margin: 0;
+}
+
+nav.tc-hamburger-menu ul li a {
+	font-weight: 700;
+	color: #81b2e0;
+	text-decoration: none;
+}
+
+nav.tc-hamburger-menu ul li a:hover {
+	color: #fff;
+}
+
+/*
+** Style tweaks
+*/
 
 h2.tc-title {
 	font-weight: 700;
