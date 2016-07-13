@@ -1,4 +1,7 @@
 title: $:/_StaticTemplates/AllTiddlers
+tags: $:/tags/Exporter
+description: Single Page Website
+extension: .html
 
 \define tv-wikilink-template() #$uri_encoded$
 \define tv-config-toolbar-icons() no
@@ -16,7 +19,9 @@ title: $:/_StaticTemplates/AllTiddlers
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="format-detection" content="telephone=no">
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" href="static.css">
+<style type="text/css">
+`{{$:/_StaticTemplates/Styles.css}}`
+</style>
 <title>`<$transclude field="caption"><$view field="title"/></$transclude>: {{$:/core/wiki/title}}`</title>
 </head>
 <body class="tc-body">
