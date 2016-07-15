@@ -38,13 +38,29 @@ Command.prototype.execute = function() {
 	var subcommand = this.params[0];
 	switch(subcommand) {
 		case "wiki":
-			return this.fetchWiki(this.params[1],this.params[2]);
+			return this.fetchWiki(this.params[1],this.params[2],this.callback);
+			break;
+		case "servers":
+			return this.fetchServers(this.callback);
 			break;
 	}
 	return null;
 };
 
-Command.prototype.fetchWiki = function(url,filter) {
+Command.prototype.fetchServers = function(callback) {
+	// Get all tiddlers that identify servers
+	var self = this,
+		async = require("$:/plugins/tiddlywiki/async/async.js"),
+		serverTiddlerTitles = $tw.wiki.filterTiddlers("[role[twServer]]");
+	// From each one, fetch tiddlers that are discussion posts
+	async.each(serverTiddlerTitles,function(serverTiddlerTitle,callback) {
+		var serverTiddler = $tw.wiki.getTiddler(serverTiddlerTitle),
+			url = serverTiddler.fields.url;
+		self.fetchWiki(url,"[role[twDiscussionPost]]",callback);
+	},callback);
+};
+
+Command.prototype.fetchWiki = function(url,filter,callback) {
 	if(!url) {
 		return "Missing URL";
 	}
@@ -62,11 +78,11 @@ Command.prototype.fetchWiki = function(url,filter) {
 	    response.on("end",function() {
 	        process.stdout.write("\n");
 	        self.processBody(filter,body);
-	        self.callback(null);
+	        callback(null);
 	   	});
 	   	response.on("error",function(e) {
 			console.log("Error on GET request: " + e);
-			self.callback(e);
+			callback(e);
 	   	});
 	});
 	return null;
@@ -85,6 +101,7 @@ Command.prototype.processBody = function(filter,body) {
 	// Import the selected tiddlers
 	incomingWiki.each(function(tiddler,title) {
 		if(filteredTitles.indexOf(title) !== -1) {
+console.log("Importing",title)
 			self.commander.wiki.importTiddler(tiddler);
 		}
 	});

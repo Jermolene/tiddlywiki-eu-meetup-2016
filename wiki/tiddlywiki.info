@@ -3,7 +3,8 @@
 	"plugins": [
 		"tiddlywiki/blog",
 		"tiddlywiki/fullscreen",
-		"tiddlywiki/stacked-view"
+		"tiddlywiki/stacked-view",
+		"tiddlywiki/async"
 	],
 	"themes": [
 		"tiddlywiki/vanilla",
