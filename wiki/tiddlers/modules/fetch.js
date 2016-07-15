@@ -3,7 +3,15 @@ title: $:/core/modules/commands/fetch.js
 type: application/javascript
 module-type: command
 
-Command to fetch tiddlers from a wiki at a given URL
+Commands to fetch external tiddlers
+
+--fetch wiki <url> <filter>
+
+Fetch tiddlers matching a filter from a remote wiki
+
+--fetch servers <filter>
+
+Fetch tiddlers matching a filter from remote wikis identified by tiddlers with the role "twServer"
 
 \*/
 (function(){
@@ -24,13 +32,24 @@ var Command = function(params,commander,callback) {
 };
 
 Command.prototype.execute = function() {
+	if(this.params.length < 1) {
+		return "Missing subcommand";
+	}
+	var subcommand = this.params[0];
+	switch(subcommand) {
+		case "wiki":
+			return this.fetchWiki(this.params[1],this.params[2]);
+			break;
+	}
+	return null;
+};
+
+Command.prototype.fetchWiki = function(url,filter) {
+	if(!url) {
+		return "Missing URL";
+	}
 	var self = this,
 		http = require("http");
-	if(this.params.length < 1) {
-		return "Missing url";
-	}
-	var url = self.params[0],
-		filter = self.params[1] || "";
 	http.get(url).on("response",function(response) {
 	    var body = "",
 	    	i = 0;
