@@ -1,5 +1,5 @@
 created: 20160712103053173
-modified: 20160715102439148
+modified: 20160715102724575
 tags: $:/_MainMenu
 title: Agenda
 type: text/vnd.tiddlywiki
@@ -20,6 +20,11 @@ Steps:
 # Add Travis-based continuous integration to https://github.com/Jermolene/tiddlywiki-eu-meetup-2016/
 # Add client-side Twederation plugins and explore at https://github.com/Jermolene/tiddlywiki-eu-meetup-2016/wiki.html
 # Implement necessary server-side Twederation components
+
+!! Friday dinner
+
+* How to make the greatest positive impact on the project?
+* How to use this meetup as a promotional tool for the next one?
 
 ! Saturday 16th July
 
