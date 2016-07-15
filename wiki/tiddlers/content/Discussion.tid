@@ -1,0 +1,14 @@
+title: Discussion
+tags: $:/_MainMenu
+
+<ul>
+<$list filter='[role[twDiscussionPost]!has[parent]]'>
+<li>
+<$link to=<<currentTiddler>>><$view field='title'><$view field='post_title'/></$view></$link><br>
+<$transclude />
+</li>
+<ul>
+{{ ||$:/DiscussionViewerTemplate}}
+</ul>
+</$list>
+</ul>
