@@ -4,7 +4,8 @@
 		"tiddlywiki/blog",
 		"tiddlywiki/fullscreen",
 		"tiddlywiki/stacked-view",
-		"tiddlywiki/async"
+		"tiddlywiki/async",
+		"tiddlywiki/tw2parser"
 	],
 	"themes": [
 		"tiddlywiki/vanilla",
