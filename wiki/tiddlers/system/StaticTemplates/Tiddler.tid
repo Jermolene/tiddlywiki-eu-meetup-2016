@@ -9,7 +9,7 @@ title: $:/_StaticTemplates/Tiddler
 
 <h2 class="tc-title">
 
-<a class="tc-tiddler-anchor" id=`<$text text={{!!title}}/>`>
+<a class="tc-tiddler-anchor" id="`<$text text={{!!title}}/>`">
 `
 <$text text={{!!title}}/>
 `

@@ -2,13 +2,13 @@ title: Discussion
 tags: $:/_MainMenu
 
 <ul>
-<$list filter='[role[twDiscussionPost]!has[parent]]'>
+<$list filter='[role[twDiscussionPost]!has[parent]!sort[modified]]'>
 <li>
 <$link to=<<currentTiddler>>><$view field='title'><$view field='post_title'/></$view></$link><br>
-<$transclude />
+<$transclude mode="block"/>
 </li>
 <ul>
-{{ ||$:/DiscussionViewerTemplate}}
+<$transclude tiddler="$:/DiscussionViewerTemplate" mode="block"/>
 </ul>
 </$list>
 </ul>
