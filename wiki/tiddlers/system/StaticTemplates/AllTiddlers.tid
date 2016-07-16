@@ -36,7 +36,7 @@ extension: .html
 </nav>
 <section class="tc-story-river">
 `<$importvariables filter="[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]">
-<$list filter="HelloThere [all[tiddlers]!is[system]!is[image]![HelloThere]]" template="$:/_StaticTemplates/Tiddler"/>
+<$list filter="HelloThere [all[tiddlers]!is[system]![HelloThere]]" template="$:/_StaticTemplates/Tiddler"/>
 </$importvariables>`
 </section>
 </body>
