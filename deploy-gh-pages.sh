@@ -2,7 +2,7 @@
 set -e # exit with nonzero exit code if anything fails
 
 
-if [ $TREVIS == "true" ]
+if [ $TRAVIS == "true" ]
 then
   echo "----> Trevis detected. OK"
 else
@@ -25,7 +25,7 @@ echo
 npm run stage
 
 echo
-echo "----> go to tmp/jermolen.github.io/"
+echo "----> go to tmp/jermolene.github.io/"
 echo
 
 
