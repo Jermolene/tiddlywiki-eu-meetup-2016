@@ -1,6 +1,8 @@
 title: Discussion
 tags: $:/_MainMenu
 
+This is the federated discussion from the time of the meetup.
+
 <ul>
 <$list filter='[role[twDiscussionPost]!has[parent]!sort[modified]]'>
 <li>

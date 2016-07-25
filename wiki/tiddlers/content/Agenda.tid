@@ -1,17 +1,20 @@
 created: 20160712103053173
-modified: 20160715102724575
+modified: 20160718111413031
 tags: $:/_MainMenu
 title: Agenda
 type: text/vnd.tiddlywiki
 
-! Friday 15th July
-
-Discussion points:
+! Topics
 
 * Formalising project roles
 * Future of TiddlySpace
+* Cleaning up open PRs and issues
+* How to make the greatest positive impact on the project?
+* How to use this meetup as a promotional tool for the next one?
 
-We're going to work together towards the goal of adding server-side twederation to this site:
+! Activities
+
+We planned to work together to add server-side twederation to the meetup website, and use the emerging threaded discussion to document our activities:
 
 http://tiddlywiki.com/tiddlywiki-eu-meetup-2016/
 
@@ -21,19 +24,8 @@ Steps:
 # Add client-side Twederation plugins and explore at https://github.com/Jermolene/tiddlywiki-eu-meetup-2016/wiki.html
 # Implement necessary server-side Twederation components
 
-!! Friday dinner
-
-* How to make the greatest positive impact on the project?
-* How to use this meetup as a promotional tool for the next one?
-
-! Saturday 16th July
-
-Things to do:
-
-* Clean up open PRs and issues
-
 ! Trello
 
-We've been discussing potential agenda items [[on a public Trello board|https://trello.com/b/zklZBbLS]].
+We discussed potential agenda items [[on a public Trello board|https://trello.com/b/zklZBbLS]].
 
 <iframe src="https://trello.com/b/zklZBbLS.html" frameborder="0" width="560" height="600" style="border:0;"/>
